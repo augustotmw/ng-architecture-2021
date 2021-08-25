@@ -1,0 +1,5 @@
+
+<ol *ngIf="lista?.length">
+  <li *ngFor="let item of lista">{{ item?.id }}</li>
+</ol>
+<p *ngIf="!lista?.length">Lista vazia</p>
