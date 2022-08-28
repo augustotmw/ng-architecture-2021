@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import {ExemploModule} from './modules/exemplo/exemplo.module';
 import {HomeModule} from "./modules/home/home.module";
+import {AuthGuardService} from "./core/guard/auth-guard.service";
 
 const ComponentsModules = [
   HomeModule,
@@ -23,7 +24,7 @@ const ComponentsModules = [
     ...ComponentsModules
   ],
   exports: [],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

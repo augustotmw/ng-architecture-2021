@@ -4,3 +4,13 @@
   display: block;
   width: 100%;
 }
+
+
+.bg-gradiente-parcial {
+  margin-top: 30px;
+  min-height: 500px;
+  width: 100%;
+  border: 1px solid blue;
+  background: linear-gradient(0deg, #a600cf 0%, #ff0000 100%) no-repeat, linear-gradient(0deg, #ddd 0%, #ddd 100%) no-repeat;
+  background-size: 100% 70%, 100% auto;
+}

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {StructureComponent} from './core/components/structure/structure.component';
 import {ContainerExemploComponent} from './modules/exemplo/containers/container-exemplo/container-exemplo.component';
 import {ContainerHomeComponent} from "./modules/home/containers/container-home/container-home.component";
+import {AuthGuardService} from "./core/guard/auth-guard.service";
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
         component: ContainerExemploComponent,
         data: {
           breadcrumb: 'Exemplo'
-        }
+        },
+        canActivate: [AuthGuardService]
       }
     ]
   }
